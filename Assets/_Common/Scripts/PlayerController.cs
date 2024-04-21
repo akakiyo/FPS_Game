@@ -32,7 +32,10 @@ public class PlayerController : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(bullet, transform.position + new Vector3(0, 0, 1), Quaternion.identity);
+            GameObject a = Instantiate(bullet, transform.position + new Vector3(0, 0, 3), Quaternion.identity);
+
+            Rigidbody rb = a.GetComponent<Rigidbody>();
+            rb.AddForce(a.transform.forward * 1000); // 力の大きさは調整してください
         }
     }
 }

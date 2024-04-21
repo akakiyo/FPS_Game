@@ -15,7 +15,6 @@ public class BulletController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.AddForce(Vector3.forward * bulletSpeed);
     }
 
     void OnCollisionEnter(Collision collision)
