@@ -352,6 +352,7 @@
 -analyzer:"/Applications/Unity/Hub/Editor/2022.3.24f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"/Applications/Unity/Hub/Editor/2022.3.24f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/_Common/Scripts/BulletController.cs"
+"Assets/_Common/Scripts/Camera.cs"
 "Assets/_Common/Scripts/EnemyController.cs"
 "Assets/_Common/Scripts/PlayerController.cs"
 "Assets/_Common/Scripts/SpwanManager.cs"
