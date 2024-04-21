@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
         Rigidbody rb = GetComponent<Rigidbody>();
         rb.AddForce(movement * moveSpeed);
     }
+    
 
     void Fire()
     {

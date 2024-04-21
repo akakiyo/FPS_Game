@@ -354,6 +354,7 @@
 "Assets/_Common/Scripts/BulletController.cs"
 "Assets/_Common/Scripts/EnemyController.cs"
 "Assets/_Common/Scripts/PlayerController.cs"
+"Assets/_Common/Scripts/SpwanManager.cs"
 -langversion:9.0
 
 /deterministic

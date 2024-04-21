@@ -17,7 +17,6 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(attackTimer);
         if(attackInterval <= attackTimer)
         {
            Fire();
