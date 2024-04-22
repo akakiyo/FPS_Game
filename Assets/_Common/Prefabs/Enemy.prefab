@@ -147,6 +147,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 4094342750789824225, guid: 991ab8da44b244a94a77be4f3a679b94, type: 3}
-  player: {fileID: 183203980251183440, guid: de9c3bcf46aa441eabdb618ad568422f, type: 3}
+  gameManager: {fileID: 4038289460412806533, guid: 7d62932e8265441d3b9dd8a0144542bd, type: 3}
   attackInterval: 1
   attackTimer: 0

@@ -27,6 +27,7 @@ public class EnemyController : MonoBehaviour
     {
         if(collision.gameObject.tag == "Bullet"){
             Destroy(gameObject);
+            GameManager.instance.score++;
         }
     }
 
