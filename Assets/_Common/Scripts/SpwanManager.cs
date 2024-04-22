@@ -29,6 +29,6 @@ public class SpwanManager : MonoBehaviour
     {
             spawnX = Random.Range(-10, 10);
             spawnZ = Random.Range(-10, 10);
-            Instantiate(enemy, new Vector3(spawnX, 0.76f, spawnZ), Quaternion.identity);
+            Instantiate(enemy, new Vector3(spawnX, 0.76f, spawnZ), Quaternion.identity, transform.parent);
     }
 }

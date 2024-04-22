@@ -20,7 +20,7 @@ public class BulletController : MonoBehaviour
     {
         Destroy(gameObject);
     }
-    public void Fire(string tag,Vector3 position, Quaternion rotation)
+    public void Fire(string tag,Vector3 position, Quaternion rotation, Transform parent = null)
     {
         Vector3 dir = Vector3.zero;
         switch (tag)
@@ -32,7 +32,7 @@ public class BulletController : MonoBehaviour
                 dir = new Vector3(0, 0, -3);
                 break;
         }
-        GameObject bullet = Instantiate(gameObject, position + dir, rotation);
+        GameObject bullet = Instantiate(gameObject, position + dir, rotation, parent);
         bullet.tag = tag + "Bullet";
 
         Rigidbody rb = bullet.GetComponent<Rigidbody>();

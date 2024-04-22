@@ -8,9 +8,11 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public int score = 0;
     private Text scoreMessage;
+    private Text hpMessage;
     // Start is called before the first frame update
     void Start()
     {
+        UIManager.instance.ShowBattleScreen();
         scoreMessage = GameObject.Find("Score").GetComponent<Text>();
     }
     private void Awake()
@@ -18,7 +20,7 @@ public class GameManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(this.gameObject);
         }
         else
         {
@@ -30,5 +32,15 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         scoreMessage.text = "Score: " + score;
+        UpdateHPMessage();
+    }
+
+    // PlayerのHPをhpMessageに反映させる
+    
+    public void UpdateHPMessage()
+    {
+        int hp = GameObject.FindWithTag("Player").GetComponent<PlayerController>().HP;
+        hpMessage = GameObject.Find("HP").GetComponent<Text>();
+        hpMessage.text = "HP: " + hp;
     }
 }

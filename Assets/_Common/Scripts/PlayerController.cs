@@ -6,10 +6,11 @@ public class PlayerController : MonoBehaviour
 {
     // Start is called before the first frame update
     public float moveSpeed = 1f;
+
+    public int HP = 100;
     public BulletController bullet;
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -28,15 +29,32 @@ public class PlayerController : MonoBehaviour
         float moveVertical = Input.GetAxis("Vertical");
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
         Rigidbody rb = GetComponent<Rigidbody>();
-        // rb.AddForce(movement * moveSpeed);
         rb.velocity = movement * moveSpeed;
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "EnemyBullet"){
+            Damage(10);
+        }
     }
 
     void Fire()
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            bullet.Fire(gameObject.tag, transform.position, Quaternion.identity);
+            bullet.Fire(gameObject.tag, transform.position, Quaternion.identity, transform.parent);
+        }
+    }
+
+    void Damage(int damage)
+    {
+        HP -= damage;
+
+        if(HP <= 0)
+        {
+            //UIManagerのShowResultScreenを呼び出す
+            UIManager.instance.ShowResultScreen();
         }
     }
 }
