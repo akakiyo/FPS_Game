@@ -33,6 +33,7 @@ public class BulletController : MonoBehaviour
                 break;
         }
         GameObject bullet = Instantiate(gameObject, position + dir, rotation);
+        bullet.tag = tag + "Bullet";
 
         Rigidbody rb = bullet.GetComponent<Rigidbody>();
         rb.AddForce(bullet.transform.forward * bulletSpeed);

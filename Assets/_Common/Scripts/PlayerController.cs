@@ -15,8 +15,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MovePlayer();
         Fire();
+    }
+
+    void FixedUpdate() {
+        MovePlayer();
     }
 
     void MovePlayer()
@@ -25,7 +28,8 @@ public class PlayerController : MonoBehaviour
         float moveVertical = Input.GetAxis("Vertical");
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
         Rigidbody rb = GetComponent<Rigidbody>();
-        rb.AddForce(movement * moveSpeed);
+        // rb.AddForce(movement * moveSpeed);
+        rb.velocity = movement * moveSpeed;
     }
 
     void Fire()

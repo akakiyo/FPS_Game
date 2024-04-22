@@ -357,7 +357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2858c633dd0094374b07e0d377ce23d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnInterval: 1
+  spawnInterval: 5
   enemy: {fileID: 4037156201801039224, guid: 6caf77a4f9a6e412599627cc4039ab3a, type: 3}
 --- !u!4 &1416313660
 Transform:
@@ -662,7 +662,7 @@ PrefabInstance:
       objectReference: {fileID: 4094342750789824225, guid: 991ab8da44b244a94a77be4f3a679b94, type: 3}
     - target: {fileID: 939138225032452811, guid: de9c3bcf46aa441eabdb618ad568422f, type: 3}
       propertyPath: moveSpeed
-      value: 3
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6173123156859383158, guid: de9c3bcf46aa441eabdb618ad568422f, type: 3}
       propertyPath: m_LocalPosition.x
