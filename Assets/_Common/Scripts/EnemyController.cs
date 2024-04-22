@@ -36,6 +36,6 @@ public class EnemyController : MonoBehaviour
         GameObject player = GameObject.FindWithTag("Player");
         Vector3 directionToPlayer = player.transform.position - transform.position;
         Quaternion rotationTowardsPlayer = Quaternion.LookRotation(directionToPlayer);
-        bullet.Fire(gameObject.tag, transform.position, rotationTowardsPlayer, transform.parent);
+        bullet.Fire(gameObject, transform.position, rotationTowardsPlayer, transform.parent);
     }
 }

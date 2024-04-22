@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            bullet.Fire(gameObject.tag, transform.position, Quaternion.identity, transform.parent);
+            bullet.Fire(gameObject, transform.position, Quaternion.identity, transform.parent);
         }
     }
 
